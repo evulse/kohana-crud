@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="span12"><h3>Active Models</h3></div>
+</div>
+<div class="row">
+    <div class="span12">
+        <table class="table table-striped">
+
+            <tbody>
+            {{#models}}<tr><td><a href="/crud/read/{{{.}}}">{{{.}}}</a></td></tr>{{/models}}
+            </tbody>
+        </table>
+        {{{debug}}}
+    </div>
+</div>
+
+{{#has_many}}{{{.}}}{{/has_many}}
+

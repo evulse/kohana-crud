@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="span10"><h3>{{model_plural}}</h3></div>
+    <span class="pull-right"><a href="/crud/create/{{model}}" class="btn btn-success btn-mini pull-right">Add {{model_pretty}}</a></span>
+</div>
+<div class="row">
+    <div class="span12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                {{#columns}}<th>{{column}}</th>{{/columns}}
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            {{#rows}}<tr>{{#.}}<td>{{{.}}}</td>{{/.}}</tr>{{/rows}}
+            </tr>
+            </tbody>
+        </table>
+        {{{debug}}}
+    </div>
+</div>
+
